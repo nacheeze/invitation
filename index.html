@@ -49,109 +49,106 @@
     }*/
     
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-  background-color: #f3f3f3;
-}
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+      background-color: #f3f3f3;
+      height: 100vh;
+      overflow: hidden; /* 스크롤 제거 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-/* 가운데 카드 래핑 */
-.preview-wrap {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    /* 카드 비율 : 4:5 */
+    .invite-card {
+      width: 90vw;
+      max-width: 400px;
+      aspect-ratio: 4 / 5;
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+    }
 
-/* 카드 전체 */
-.invite-card {
-  width: 100%;
-  max-width: 400px;          
-  background-color: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-}
+    /* 이미지 영역 더 크게 (카카오 스타일 유사) */
+    .invite-image {
+      flex: 6.5; /* 65% */
+      overflow: hidden;
+    }
 
-/* 상단 사진 영역 */
-.invite-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+    .invite-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-/* 하단 내용 영역 */
-.invite-body {
-  padding: 16px 18px 12px;
-}
+    /* 내용 영역 */
+    .invite-body {
+      flex: 3.5; /* 35% */
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-/* 제목 */
-.invite-title {
-  margin: 0 0 8px;
-  font-size: 17px;
-  font-weight: 700;
-  color: #111111;
-}
+    .invite-title {
+      margin: 0 0 8px;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      color: #111;
+    }
 
-/* 날짜,장소 */
-.invite-info {
-  margin: 0 0 18px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #777777;
-}
+    .invite-info {
+      margin: 0 0 16px;
+      font-size: 14px;
+      line-height: 1.45;
+      text-align: center;
+      color: #777;
+    }
 
-/* 버튼 영역 */
-.invite-buttons {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 14px;
-}
+    /* 버튼 묶음 */
+    .invite-buttons {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
 
-.invite-btn {
-  flex: 1;
-  height: 44px;
-  border-radius: 10px;
-  border: none;
-  background-color: #f2f2f2;
-  font-size: 15px;
-  font-weight: 500;
-  color: #333;
-  cursor: pointer;
-}
+    .invite-btn {
+      flex: 1;
+      height: 42px;
+      border-radius: 10px;
+      border: none;
+      background-color: #f2f2f2;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+    }
 
-.invite-btn.primary {
-  background-color: #f4f4f4;
-}
+    .invite-btn:active {
+      background-color: #e2e2e2;
+    }
 
-.invite-btn:active {
-  background-color: #e2e2e2;
-}
+    /* 하단 작은 로고줄 */
+    .invite-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+      font-size: 12px;
+      color: #777;
+    }
 
-/* 하단 로고 라인 */
-.invite-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid #eeeeee;
-  padding-top: 10px;
-}
-
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer-logo {
-  font-size: 13px;
-  color: #777777;
-}
-
-.footer-right {
-  font-size: 18px;
-  color: #b3b3b3;
-}   
+    .footer-right {
+      font-size: 18px;
+      color: #b3b3b3;
+    }
+  </style>
   </style>
 </head>
 
@@ -162,33 +159,33 @@ body {
 
   <img src="https://cdn.jsdelivr.net/gh/nacheeze/invitation/img_1764124941578.jpg" alt="결혼식 이미지">-->
   <!-- rebuild -->
-  <div class="preview-wrap">
-    <div class="invite-card">
-      <div class="invite-image">
+  <div class="invite-card">
+    
+    <div class="invite-image">
         <!-- 청첩장 대표 사진 -->
         <img src="https://cdn.jsdelivr.net/gh/nacheeze/invitation/img_1764124941578.jpg" alt="청첩장 대표사진">
       </div>
 
-      <div class="invite-body">
+   <div class="invite-body">
+      <div>
         <h2 class="invite-title">김현제♥나소영 결혼합니다</h2>
         <p class="invite-info">
           26.04.18. 토요일 오후 3시<br>
           서울대학교 호암교수회관
         </p>
+      </div>
 
-        <div class="invite-buttons">
-          <button type="button" class="invite-btn primary">청첩장 보기</button>
-          <button type="button" class="invite-btn">위치 보기</button>
-        </div>
+      <div class="invite-buttons">
+        <button class="invite-btn">청첩장 보기</button>
+        <button class="invite-btn">위치 보기</button>
+      </div>
 
-        <div class="invite-footer">
-          <div class="footer-left">
-            <div class="footer-logo">소영 테스트용</div>
-          </div>
-          <div class="footer-right">›</div>
-        </div>
+      <div class="invite-footer">
+        <span>소영 테스트용</span>
+        <span class="footer-right">›</span>
       </div>
     </div>
+
   </div>
 </body>
 </html>

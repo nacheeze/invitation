@@ -6,6 +6,7 @@
 
   <title>김현제♥나소영 결혼합니다</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 
   <!-- OG Tags -->
   <meta property="og:title" content="김현제♥나소영 결혼합니다">
@@ -25,6 +26,7 @@
   <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/nacheeze/invitation/img_1764124941578.png">
 
   <style>
+    /*
     body {
       font-family: sans-serif;
       padding: 40px;
@@ -44,15 +46,149 @@
       width: 300px;
       border-radius: 12px;
       margin-top: 20px;
-    }
+    }*/
+    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* 가운데 카드 래핑 */
+.preview-wrap {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 카드 전체 */
+.invite-card {
+  width: 100%;
+  max-width: 420px;          /* 모바일 폭 느낌 */
+  background-color: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* 상단 사진 영역 */
+.invite-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 하단 내용 영역 */
+.invite-body {
+  padding: 16px 18px 12px;
+}
+
+/* 제목 */
+.invite-title {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* 날짜,장소 */
+.invite-info {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #777777;
+}
+
+/* 버튼 영역 */
+.invite-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.invite-btn {
+  flex: 1;
+  height: 44px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.invite-btn.primary {
+  background-color: #f4f4f4;
+}
+
+.invite-btn:active {
+  background-color: #e2e2e2;
+}
+
+/* 하단 로고 라인 */
+.invite-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eeeeee;
+  padding-top: 10px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  font-size: 13px;
+  color: #777777;
+}
+
+.footer-right {
+  font-size: 18px;
+  color: #b3b3b3;
+}   
   </style>
 </head>
 
 <body>
-  <h1>김현제 ♥ 나소영 결혼합니다</h1>
+  
+  /*<!--<h1>김현제 ♥ 나소영 결혼합니다</h1>
   <p>26.04.18 오후 3시<br>서울대학교 호암교수회관</p>
 
-  <img src="https://cdn.jsdelivr.net/gh/nacheeze/invitation/img_1764124941578.png" alt="결혼식 이미지">
+  <img src="https://cdn.jsdelivr.net/gh/nacheeze/invitation/img_1764124941578.png" alt="결혼식 이미지">-->*/
   <!-- rebuild -->
+  <div class="preview-wrap">
+    <div class="invite-card">
+      <div class="invite-image">
+        <!-- 청첩장 대표 사진 -->
+        <img src="https://example.com/wedding-photo.jpg" alt="청첩장 대표사진">
+      </div>
+
+      <div class="invite-body">
+        <h2 class="invite-title">민우♥효윤 결혼합니다</h2>
+        <p class="invite-info">
+          26.02.08. 일요일 오후 5시 20분<br>
+          더링크호텔 3층 베일리홀
+        </p>
+
+        <div class="invite-buttons">
+          <button type="button" class="invite-btn primary">청첩장 보기</button>
+          <button type="button" class="invite-btn">위치 보기</button>
+        </div>
+
+        <div class="invite-footer">
+          <div class="footer-left">
+            <div class="footer-logo">Salon de Letter</div>
+          </div>
+          <div class="footer-right">›</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
